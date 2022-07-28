@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-freshbee-dev-73808-authRole",
+            "UnauthRoleArn": "arn:aws:iam::855026175836:role/amplify-freshbee-dev-73808-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::855026175836:role/amplify-freshbee-dev-73808-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-freshbee-dev-73808-deployment",
+            "UnauthRoleName": "amplify-freshbee-dev-73808-unauthRole",
+            "StackName": "amplify-freshbee-dev-73808",
+            "StackId": "arn:aws:cloudformation:us-east-1:855026175836:stack/amplify-freshbee-dev-73808/1878f400-af05-11ec-9e4d-0a771df94cbf",
+            "AmplifyAppId": "d241xpmoupiob2"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d241xpmoupiob2",
+                    "type": "cicd"
+                }
+            }
+        }
+    }
+}

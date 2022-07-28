@@ -2,8 +2,8 @@ import { error } from 'console';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { DefaultErrorResponse, DefaultSuccessResponse } from '../interface/response.t';
 import { jwtMiddleware } from '../middleware/jwtMiddleware';
-import { addBatch, deleteBatch, listBatch, updateBatch } from './batch';
-import ValidateBatchCreationObject from './validator/create.batch.validator';
+import { addBatch, deleteBatch, listBatch, updateBatch } from './question';
+import ValidateBatchCreationObject from './validator/create.question.validator';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     jwtMiddleware(req, res).then((response) => {

@@ -1,0 +1,339 @@
+.l-header {
+    // background-color: cyan;
+    height: 60px;
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+.img {
+    margin-left: 90px;
+    margin-bottom: 10px;
+}
+
+.vl {
+    border-left: 2px solid gray;
+    position: absolute;
+    left: 40%;
+    top: 0;
+    margin-top: 60px;
+    height: 100%;
+    
+}
+
+.body {
+    margin-left: 80px;
+    margin-top: 30px;
+    width: 40%;
+}
+
+.pagetitle {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.selecttech {
+    margin-top: 20px;
+    font-size: 15px;
+    // width: 100%;
+}
+
+.dropdown{
+    margin-top: 5px;
+    border: 1px solid rgb(200, 206, 211);
+        border-radius: 5px;
+         width: 70% ;
+}
+
+
+
+.dropdown_toggle{
+    color: grey;
+    border:0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options {
+    width: 25rem;
+    color: black;
+}
+
+.btn-new {
+    width: 25rem;
+    background-color: $bg-primary;
+    color: white;
+
+    // text-decoration: solid;
+}
+
+.btn-new:hover {
+    background-color: $bg-primary;
+    color: white;
+    
+}
+
+.technologyname {
+    margin-top: 20px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.question {
+    margin-top: 20px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.answer {
+    margin-top: 20px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.inpt{
+    // margin-left: 6rem;
+    // line-height: 2rem;
+    margin-top: 10px;
+    width: 70%;
+    height: 2rem;
+    border: 1px solid $border-primary;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.inpq{
+    // margin-left: 6rem;
+    // line-height: 2rem;
+    margin-top: 10px;
+    width: 70%;
+    height: 5rem;
+    border: 1px solid $border-primary;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.inpa{
+    // margin-left: 6rem;
+    // line-height: 2rem;
+    margin-top: 10px;
+    width: 70%;
+    height: 6rem;
+    border: 1px solid $border-primary;
+    border-radius: 4px;
+    background-color: white;
+}
+
+input::placeholder{
+    // margin-top: -30px;
+    text-align: left;
+    color: grey;
+
+}
+
+.weightage {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.radioweightage input[type="radio"]
+{
+    margin-left: 2rem;
+    
+}
+
+.button1 {
+    margin-left: 60%;
+}
+.buttonsubmit {
+    border-color: grey;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    text-decoration: none;
+    display: inline-block;
+    color: grey;
+    width: 90px;
+    padding: 5px;
+}
+
+.Display {
+    display: flex;
+    height: 100%;
+    margin-left: 50%;
+    position: absolute;
+    font-size: 20px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 480px) {
+
+    .body {
+        width: 40%;
+    }
+    .vl {
+        border-left: 2px solid gray;
+        position: fixed;
+        left: 70%;
+        top: 0;
+        margin-top: 60px;
+        height: 20px;
+        
+    }
+    .pagetitle {
+        font-weight: bolder;
+        font-size: 15px;
+    }
+    .inp {  
+        line-height: 2rem;
+        width: 70%;
+    }
+    input::placeholder {
+        padding: 1rem;
+    }
+    .scr_details {
+        font-size: 90%;
+    }
+    .rad {
+        margin-left: 5.5rem;
+    }
+    .scr_per {
+        color: #ed6939;
+        font-size: 1.2rem;
+    }
+    .weightage {
+        width: 60%;
+    }
+    input[type="radio"] {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .btn-scr {
+        padding-top: 1rem;
+    }
+    .scr-primary {  
+        width: 9rem;
+        font-size: 80%;  
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+  }
+  
+@media only screen and (max-width: 767px) {
+
+    .body {
+        width: 40%;
+    }
+    .vl {
+        border-left: 2px solid gray;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-top: 60px;
+        height: 100%;
+        
+    }
+    .pagetitle {
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    .inp {  
+        line-height: 2rem;
+        width: 70%;
+    }
+    input::placeholder {
+        padding: 1rem;
+    }
+    .scr_details {
+        font-size: 90%;
+    }
+    .rad {
+        margin-left: 5.5rem;
+    }
+    .scr_per {
+        color: #ed6939;
+        font-size: 1.2rem;
+    }
+    input[type="radio"] {
+        margin-left: 1.5rem;
+    }
+    .btn-scr {
+        padding-top: 1rem;
+    }
+    .scr-primary {  
+        width: 9rem;
+        font-size: 80%;  
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    .radioweightage input[type="radio"]
+    {
+        margin-left: .5rem;
+    }
+    .button1 {
+        margin-left: 30%;
+    }
+  }
+
+
+@media only screen and (max-width: 1024px) {
+
+    .body {
+        width: 60%;
+    }
+    .vl {
+        border-left: 2px solid gray;
+        position: absolute;
+        left: 55%;
+        top: 0;
+        margin-top: 60px;
+        height: 100%;
+        
+    }
+    .pagetitle {
+        font-weight: bolder;
+        font-size: 25px;
+    }
+    .inp {  
+        line-height: 2rem;
+        width: 70%;
+    }
+    input::placeholder {
+        padding: 1rem;
+    }
+    .scr_details {
+        font-size: 90%;
+    }
+    .rad {
+        margin-left: 5.5rem;
+    }
+    .scr_per {
+        color: #ed6939;
+        font-size: 1.2rem;
+    }
+    input[type="radio"] {
+        margin-left: 1.5rem;
+    }
+    .btn-scr {
+        padding-top: 1rem;
+    }
+    .scr-primary {  
+        width: 9rem;
+        font-size: 80%;  
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    .radioweightage input[type="radio"]
+    {
+        margin-left: 1.5rem;
+    }
+    .button1 {
+        margin-left: 50%;
+    }
+  }
+
+  

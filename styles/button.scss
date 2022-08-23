@@ -1,6 +1,7 @@
+
 .btn-primary {
     background-color: $bg-primary;
-    border-color: $bg-primary;
+    border:none;
     padding-top: 7px;
     padding-bottom: 7px;
     &:focus, &:hover {

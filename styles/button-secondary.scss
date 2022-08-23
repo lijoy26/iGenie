@@ -1,0 +1,10 @@
+.btn-secondary {
+    background-color: $border-primary;
+    border:none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    &:focus, &:hover {
+        background-color: $border-primary;
+        
+    }
+}

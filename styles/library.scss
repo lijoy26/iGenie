@@ -1,0 +1,185 @@
+.l-header {
+    // background-color: cyan;
+    height: 60px;
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+.img {
+    margin-left: 90px;
+    margin-bottom: 10px;
+}
+
+.vl {
+    border-left: 1px solid gray;
+    position: fixed;
+    left: 40%;
+    top: 0;
+    height: 100%;
+    
+}
+
+.body {
+    margin-left: 80px;
+    margin-top: 30px;
+    width: 40%;
+}
+
+.pagetitle {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.selecttech {
+    margin-top: 20px;
+    color: "#102333";
+    font-size: 15px;
+    // width: 100%;
+}
+
+.dropdown{
+    margin-top: 5px;
+    border: 1px solid rgb(200, 206, 211);
+        border-radius: 5px;
+         width: 70% ;
+}
+
+
+
+.dropdown_toggle{
+     border:0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options {
+    width: 25rem;
+}
+
+.btn-new {
+    width: 25rem;
+    background-color: $bg-primary;
+}
+
+.question {
+    margin-top: 20px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.answer {
+    margin-top: 20px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.lib_inp{
+    // margin-left: 6rem;
+    // line-height: 2rem;
+    margin-top: 10px;
+    width: 70%;
+    height: 5rem;
+    border: 1px solid $border-primary;
+    border-radius: 4px;
+    background-color: whitesmoke;
+}
+.lib_inp::placeholder{
+    // margin-top: -30px;
+    text-align: left;
+    color: grey;
+
+}
+
+.weightage {
+    margin-top: 20px;
+}
+.Display {
+    display: flex;
+    height: 100%;
+    margin-left: 50%;
+    position: absolute;
+    font-size: 20px;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 730px) {
+
+    .body {
+  
+      width: 80%;
+  
+    }
+  
+    .lib_inp {  
+      line-height: 2rem;
+  
+      width: 70%;
+  
+    }
+  
+  
+  
+    input::placeholder {
+  
+      padding: 1rem;
+  
+    }
+  
+    .scr_details {
+  
+      font-size: 90%;
+  
+    }
+  
+    .rad {
+  
+      margin-left: 5.5rem;
+  
+    }
+  
+  
+  
+    .scr_per {
+  
+      color: #ed6939;
+  
+      font-size: 1.2rem;
+  
+    }
+  
+  
+  
+    input[type="radio"] {
+  
+      margin-left: 1.5rem;
+  
+    }
+  
+  
+  
+    .btn-scr {
+  
+      padding-top: 1rem;
+  
+  
+  
+    }
+  
+  
+  
+    .scr-primary {
+  
+      width: 9rem;
+  
+      font-size: 80%;
+  
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+  }

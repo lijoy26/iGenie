@@ -15,7 +15,7 @@ body {
 * {
     box-sizing: border-box;
 }
-a, input, button, select, textarea, *[tabindex='0'] {
+ input, select, textarea, *[tabindex='0'] {
     &:focus {
         outline: 2px solid $focus !important;
         box-shadow: 0 0 4px 4px $focus !important;

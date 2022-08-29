@@ -9,13 +9,13 @@ body {
 }
 
 .side-navbar {
-  width: 180px;
+  width: 10em;
   height: 100%;
-  position: fixed;
-  margin-left: -300px;
+  
+  
   transition: 0.5s;
   border-right: 1px solid #dee2e6;
-  background: white;
+  background: rgb(255, 253, 253);
 }
 
 .main {
@@ -59,7 +59,7 @@ body {
   padding-left: 0;
 }
 
-.nav-link {
+/* .nav-link {
   display: block;
   padding: 0.5rem 1rem;
   color: #000000;
@@ -72,7 +72,7 @@ body {
 .nav-link:focus {
   font-weight: bold !important;
   color: black;
-}
+} */
 
 .dropdown-item:hover,
 .dropdown-item:focus {

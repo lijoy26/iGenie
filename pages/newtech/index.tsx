@@ -5,9 +5,8 @@ import { useRouter } from 'next/router';
 import Image from "next/image";
 import Dropdown from 'react-bootstrap/Dropdown';
 import React, {useState} from 'react';
-import NewTech from '../newtech';
 
-const Home: NextPage = () => {
+const NewTech = () => {
     const router = useRouter()
 
     const [data, setData] = useState(null);
@@ -16,14 +15,6 @@ const Home: NextPage = () => {
     const [answer, setAnswer] = useState('Type Answer');
     const [weightage, setWeightage] = useState(null);
 
-
-    const show = () => {
-        console.log('Hello')
-    }
-
-    // const add = () => {
-    //     setTechnology(value);
-    // }
 
     return (
     <>
@@ -77,15 +68,24 @@ const Home: NextPage = () => {
                         <Dropdown.Item href="#/javascript" onClick={() => setTechnology("Javascript")}>Javascript</Dropdown.Item>
                         <Dropdown.Item href="#/python" onClick={() => setTechnology("Python")}>Python</Dropdown.Item>
                         <Dropdown.Item href="#/reactJS" onClick={() => setTechnology("ReactJS")}>ReactJS</Dropdown.Item>
-                        <Dropdown.Item href="#/ux" onClick={() => setTechnology("UX Designer")}>UX Designer</Dropdown.Item>
+                        <Dropdown.Item href="#/ux" onClick={() => setTechnology("UX Designer")}><Link href={'/library'}>UX Designer</Link></Dropdown.Item>
                         {/* <Dropdown.Item className='btn-new' href="#/newtechnology" onClick={(event) => [setTechnology("New Technology"), newTechnology()]}>New Technology</Dropdown.Item> */}
                         <button className="btn-new" onClick={() => setTechnology("New Technology")}>
-                            <Link 
-                                href={'/newtech'} >New Technology
-                            </Link>
+                            <a>
+                                New Technology
+                            </a>
                         </button>
                     </Dropdown.Menu>
                 </Dropdown>
+            </div>
+
+            <div className='technologyname'>
+                <label htmlFor="name" className="">Technology Name *</label>
+                <input
+                    className="inpt"
+                    type="text"
+                    placeholder='Technology Name'
+                    required />
             </div>
 
 
@@ -123,14 +123,14 @@ const Home: NextPage = () => {
             </div>
 
             <div className='button1'>
-                <button onClick={show} className="buttonsubmit"><a>Submit</a></button>
+                <button className="buttonsubmit"><a>Submit</a></button>
             </div>
         </div>
     </>
 
     )
 }
-export default Home
+export default NewTech
 
 function value(value: any): void {
     throw new Error('Function not implemented.');

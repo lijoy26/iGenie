@@ -5,16 +5,17 @@ import { useRouter } from 'next/router';
 import Image from "next/image";
 import Dropdown from 'react-bootstrap/Dropdown';
 import React, {useState} from 'react';
-import NewTech from '../newtech';
 
-const Home: NextPage = () => {
+
+const NewTech = () => {
     const router = useRouter()
 
     const [data, setData] = useState(null);
-    const [technology, setTechnology] = useState('Select Technology');
+    const [technology, setTechnology] = useState('New Technology');
     const [question, setQuestion] = useState('Type Question');
     const [answer, setAnswer] = useState('Type Answer');
     const [weightage, setWeightage] = useState(null);
+
 
     return (
     <>
@@ -33,22 +34,23 @@ const Home: NextPage = () => {
         </Link>   
         </div>
 
-        <div className="Display" style={{marginTop: "20px", marginLeft: "35%"}}>
-            <div style={{paddingLeft: "30rem", paddingTop: "20rem"}}>
-                <Image
-                    src="/images/searchdoc.png"
-                    alt="searching data"
-                    width={100}
-                    height={100}
-                ></Image>
-                <p style={{marginLeft: "1rem"}}>No Data</p>
-                <p style={{marginLeft: "-2rem"}}>Select any technology</p>
-            </div>
-        </div>
-
-
         <div className='body'>
-        {/* <View style={styles.verticleLine}></View> */}
+        
+            <div className="Display">
+                <div className='sideheading'>
+                    New Technology
+                </div>
+
+                <div style={{marginLeft: "15rem", marginTop: "10rem"}}>
+                    <Image
+                            src="/images/newtech.png"
+                            alt="logo"
+                            width={400}
+                            height={350}
+                    ></Image>
+                </div>
+            </div>
+
             <div className="pagetitle">
                 Contribute to Library
             </div>
@@ -60,7 +62,7 @@ const Home: NextPage = () => {
                     Select Technology *
                 
                     <Dropdown className='dropdown'>
-                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle'>
+                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle' style={{color: "black"}}>
                         {technology}
                     </Dropdown.Toggle>
 
@@ -68,20 +70,26 @@ const Home: NextPage = () => {
                         <Dropdown.Item href={"/angular"} onClick={() => setTechnology("Angular")}>Angular</Dropdown.Item>
                         <Dropdown.Item href={"/buisness_analyst"} onClick={() => setTechnology("Buisness Analyst")}>Buisness Analyst</Dropdown.Item>
                         <Dropdown.Item href={"/c++"} onClick={() => setTechnology("C++")}>C++</Dropdown.Item>
-                        <Dropdown.Item href={"/javascript"} onClick={() => setTechnology("Javascript")}>Javascript</Dropdown.Item>
+                        <Dropdown.Item href={"/javascript"} onClick={() => setTechnology("Javascript")}>JavaScript</Dropdown.Item>
                         <Dropdown.Item href={"/python"} onClick={() => setTechnology("Python")}>Python</Dropdown.Item>
                         <Dropdown.Item href={"/reactjs"} onClick={() => setTechnology("ReactJS")}>ReactJS</Dropdown.Item>
                         <Dropdown.Item href={"/ux"} onClick={() => setTechnology("UX Designer")}>UX Designer</Dropdown.Item>
-                        {/* <Dropdown.Item className='btn-new' href="#/newtechnology" onClick={(event) => [setTechnology("New Technology"), newTechnology()]}>New Technology</Dropdown.Item> */}
-                        <div style={{marginBottom: "-10px"}}>
-                            <Link href={'/newtech'}>
-                                <button className="btn-new" style={{paddingTop: "7px"}} onClick={() => setTechnology("New Technology")}>
-                                    <p>New Technology</p>
-                                </button>
-                            </Link>
-                        </div>
+                        <button className="btn-new" onClick={() => setTechnology("New Technology")}>
+                            <a>
+                                New Technology
+                            </a>
+                        </button>
                     </Dropdown.Menu>
                 </Dropdown>
+            </div>
+
+            <div className='technologyname'>
+                <label htmlFor="name" className="">Technology Name *</label>
+                <input
+                    className="inpt"
+                    type="text"
+                    placeholder='Technology Name'
+                    required />
             </div>
 
 
@@ -119,14 +127,14 @@ const Home: NextPage = () => {
             </div>
 
             <div className='button1'>
-                <button className="buttonsubmit1"><a>Submit</a></button>
+                <button className="buttonsubmit"><a>Submit</a></button>
             </div>
         </div>
     </>
 
     )
 }
-export default Home
+export default NewTech
 
 function value(value: any): void {
     throw new Error('Function not implemented.');

@@ -166,3 +166,6 @@ export const getBatchById = async (id: string, type: string): Promise<any> => {
         })
     })
 }
+
+
+

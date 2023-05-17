@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     const router = useRouter()
 
     const [data, setData] = useState(null);
-    const [technology, setTechnology] = useState('Select Technology');
+    const [technology, setTechnology] = useState('ReactJS');
     const [question, setQuestion] = useState('Type Question');
     const [answer, setAnswer] = useState('Type Answer');
     const [weightage, setWeightage] = useState(null);
@@ -33,34 +33,74 @@ const Home: NextPage = () => {
         </Link>   
         </div>
 
-        <div className="Display" style={{marginTop: "20px", marginLeft: "35%"}}>
-            <div style={{paddingLeft: "30rem", paddingTop: "20rem"}}>
-                <Image
-                    src="/images/searchdoc.png"
-                    alt="searching data"
-                    width={100}
-                    height={100}
-                ></Image>
-                <p style={{marginLeft: "1rem"}}>No Data</p>
-                <p style={{marginLeft: "-2rem"}}>Select any technology</p>
-            </div>
-        </div>
-
-
         <div className='body'>
-        {/* <View style={styles.verticleLine}></View> */}
+
+            <div className="Display">
+                <div className='sideheading'>
+                    ReactJS - 3
+                </div>
+
+                <div className='sidequestion'>
+                    1. What is JSX?
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>
+                        JSX is a syntax extension of JavaScript. It is used with React to describe what the user interface should look like. By using JSX, we can write HTML structures in the same file that contains JavaScript code.
+                        </p>
+                    </div>
+                    <div className='sideweightage'>
+                        2
+                    </div>
+                </div>
+
+                <div className='sidequestion'>
+                    2. What is the virtual DOM?
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>
+                        DOM stands for Document Object Model. The DOM represents an HTML document with a logical tree structure. Each branch of the tree ends in a node, and each node contains objects.
+                        <br />
+                        React keeps a lightweight representation of the real DOM in the memory, and that is known as the virtual DOM. When the state of an object changes, the virtual DOM changes only that object in the real DOM, rather than updating all the objects.
+                        </p>
+                    </div>
+                    <div className='sideweightage'>
+                        3
+                    </div>
+                </div>
+
+                <div className='sidequestion'>
+                    3. What are synthetic events in React?            
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>
+                        Synthetic events combine the response of different browser's native events into one API, ensuring that the events are consistent across different browsers.
+                        <br />
+                        The application is consistent regardless of the browser it is running in. Here, preventDefault is a synthetic event.
+                        </p>
+                    </div>
+                    <div className='sideweightage'>
+                        3
+                    </div>
+                </div>
+            </div>
             <div className="pagetitle">
                 Contribute to Library
             </div>
 
             <div className="vl"></div>
 
-
+            
             <div className= "selecttech">
                     Select Technology *
                 
                     <Dropdown className='dropdown'>
-                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle'>
+                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle' style={{color: "black"}}>
                         {technology}
                     </Dropdown.Toggle>
 
@@ -119,7 +159,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className='button1'>
-                <button className="buttonsubmit1"><a>Submit</a></button>
+                <button className="buttonsubmit"><a>Submit</a></button>
             </div>
         </div>
     </>

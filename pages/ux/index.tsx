@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     const router = useRouter()
 
     const [data, setData] = useState(null);
-    const [technology, setTechnology] = useState('Select Technology');
+    const [technology, setTechnology] = useState('UX Designer');
     const [question, setQuestion] = useState('Type Question');
     const [answer, setAnswer] = useState('Type Answer');
     const [weightage, setWeightage] = useState(null);
@@ -33,22 +33,64 @@ const Home: NextPage = () => {
         </Link>   
         </div>
 
-        <div className="Display" style={{marginTop: "20px", marginLeft: "35%"}}>
-            <div style={{paddingLeft: "30rem", paddingTop: "20rem"}}>
-                <Image
-                    src="/images/searchdoc.png"
-                    alt="searching data"
-                    width={100}
-                    height={100}
-                ></Image>
-                <p style={{marginLeft: "1rem"}}>No Data</p>
-                <p style={{marginLeft: "-2rem"}}>Select any technology</p>
-            </div>
-        </div>
-
-
         <div className='body'>
-        {/* <View style={styles.verticleLine}></View> */}
+            
+            <div className="Display">
+                <div className='sideheading'>
+                    UX Designer - 3
+                </div>
+
+                <div className='sidequestion'>
+                    1. What is UX design?
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>
+                        When this type of question comes up, the interviewer is likely not looking for a simple dictionary definition of user experience. Instead, they may be trying to suss out your understanding of the role—how it brings value to both customers and the business.
+                        <br />
+                        UX design is all about championing the user. Consider discussing how empathy and user-centered design create value. Also talk about the ways in which you keep the user at the center of the design process: user research, personas and user journey maps, and usability testing.
+                        </p>
+                    </div>
+                    <div className='sideweightage'>
+                        3
+                    </div>
+                </div>
+
+                <div className='sidequestion'>
+                    2. What is the difference between UX and UI?            
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>
+                        While the terms UI and UX are sometimes used interchangeably (or lumped together), they represent distinct roles in the product development process. Make sure you can communicate the difference between a product looking good (UI) and working effectively and efficiently (UX). 
+
+                        </p>
+                    </div>
+                    <div className='sideweightage'>
+                        2
+                    </div>
+                </div>
+
+                <div className='sidequestion'>
+                    3. What kind of research methods do you use?
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>
+                        User research is a key part of the UX design process, so interviewers will sometimes want to gauge your familiarity with the process and methods.
+                        <br />
+                        You can approach this question in a couple of ways. Be sure to walk through any user research methods you’ve used in the past (this can include the research you conducted as part of a course or degree project). Talk about the benefits and limitations of each method.
+                        </p>
+                    </div>
+                    <div className='sideweightage'>
+                        3
+                    </div>
+                </div>
+            </div>
+
             <div className="pagetitle">
                 Contribute to Library
             </div>
@@ -60,7 +102,7 @@ const Home: NextPage = () => {
                     Select Technology *
                 
                     <Dropdown className='dropdown'>
-                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle'>
+                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle' style={{color: "black"}}>
                         {technology}
                     </Dropdown.Toggle>
 
@@ -119,7 +161,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className='button1'>
-                <button className="buttonsubmit1"><a>Submit</a></button>
+                <button className="buttonsubmit"><a>Submit</a></button>
             </div>
         </div>
     </>

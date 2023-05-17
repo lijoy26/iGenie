@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     const router = useRouter()
 
     const [data, setData] = useState(null);
-    const [technology, setTechnology] = useState('Select Technology');
+    const [technology, setTechnology] = useState('Angular');
     const [question, setQuestion] = useState('Type Question');
     const [answer, setAnswer] = useState('Type Answer');
     const [weightage, setWeightage] = useState(null);
@@ -33,22 +33,48 @@ const Home: NextPage = () => {
         </Link>   
         </div>
 
-        <div className="Display" style={{marginTop: "20px", marginLeft: "35%"}}>
-            <div style={{paddingLeft: "30rem", paddingTop: "20rem"}}>
-                <Image
-                    src="/images/searchdoc.png"
-                    alt="searching data"
-                    width={100}
-                    height={100}
-                ></Image>
-                <p style={{marginLeft: "1rem"}}>No Data</p>
-                <p style={{marginLeft: "-2rem"}}>Select any technology</p>
-            </div>
-        </div>
-
-
         <div className='body'>
-        {/* <View style={styles.verticleLine}></View> */}
+        
+            <div className="Display">
+                <div className='sideheading'>
+                    Angular - 2
+                </div>
+
+                <div className='sidequestion'>
+                    1. Why were client-side frameworks like Angular introduced?
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>
+                            Back in the day, web developers used VanillaJS and jQuery to develop dynamic websites but, as the logic of one's website grew, the code became more and more tedious to maintain. For applications that use complex logic, developers had to put in extra effort to maintain the separation of concerns for the app. Also, jQuery did not provide facilities for data handling across views.
+                            <br />
+                            For tackling the above problems, client-side frameworks like Angular came into the picture, which made life easier for the developers by handling the separation of concerns and dividing code into smaller bits of information (In the case of Angular, called Components).
+                            <br />
+                            Client-side frameworks allow one to develop advanced web applications like Single-Page-Application. Not that we cannot develop SPAs using VanillaJS, but by doing so, the development process becomes slower.
+                        </p>
+                    </div>
+                    <div className='sideweightage'>
+                        5
+                    </div>
+                </div>
+
+                <div className='sidequestion'>
+                    2. What are HTTP interceptors ?
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>Using the HttpClient, interceptors allow us to intercept incoming and outgoing HTTP requests. They are capable of handling both HttpRequest and HttpResponse. We can edit or update the value of the request by intercepting the HTTP request, and we can perform some specified actions on a specific status code or message by intercepting the answer.</p>
+                    </div>
+                    <div className='sideweightage'>
+                        3
+                    </div>
+                </div>
+
+            </div>
+
+
             <div className="pagetitle">
                 Contribute to Library
             </div>
@@ -60,7 +86,7 @@ const Home: NextPage = () => {
                     Select Technology *
                 
                     <Dropdown className='dropdown'>
-                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle'>
+                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle' style={{color: 'black'}}>
                         {technology}
                     </Dropdown.Toggle>
 
@@ -119,7 +145,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className='button1'>
-                <button className="buttonsubmit1"><a>Submit</a></button>
+                <button className="buttonsubmit"><a>Submit</a></button>
             </div>
         </div>
     </>

@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     const router = useRouter()
 
     const [data, setData] = useState(null);
-    const [technology, setTechnology] = useState('Select Technology');
+    const [technology, setTechnology] = useState('Buisness Analyst');
     const [question, setQuestion] = useState('Type Question');
     const [answer, setAnswer] = useState('Type Answer');
     const [weightage, setWeightage] = useState(null);
@@ -33,22 +33,60 @@ const Home: NextPage = () => {
         </Link>   
         </div>
 
-        <div className="Display" style={{marginTop: "20px", marginLeft: "35%"}}>
-            <div style={{paddingLeft: "30rem", paddingTop: "20rem"}}>
-                <Image
-                    src="/images/searchdoc.png"
-                    alt="searching data"
-                    width={100}
-                    height={100}
-                ></Image>
-                <p style={{marginLeft: "1rem"}}>No Data</p>
-                <p style={{marginLeft: "-2rem"}}>Select any technology</p>
-            </div>
-        </div>
-
-
         <div className='body'>
-        {/* <View style={styles.verticleLine}></View> */}
+
+            <div className="Display">
+                <div className='sideheading'>
+                    Buisness Analyst - 3
+                </div>
+
+                <div className='sidequestion'>
+                    1. What is the role of a business analyst in an organization? 
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>It is the most fundamental question you can expect during your interview. You can answer this question by explaining that a business analyst is a liaison or a link between different stakeholders belonging to different domains in an organization. A business analyst should have the capabilities to fulfill the business objectives and balance the needs of various stakeholders.</p>
+                    </div>
+                    <div className='sideweightage'>
+                        4
+                    </div>
+                </div>
+
+                <div className='sidequestion'>
+                    2. What, according to you, are the core competencies of a Business Analyst?
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>It is one of the most common business analyst interview questions. Although every company is different, the core requirements of a business analyst profile are quite similar. Make sure to go over an organization's job description in detail to understand the required core competencies and include them in your answer.
+                            <br />
+                            You can answer this by stating that a business analyst must have exceptional communication and negotiation skills. Analytical thinking, problem-solving, and decision making are also vital attributes. A business analyst should have industry knowledge, business process management skills along with technical proficiency.
+                        </p>
+                    </div>
+                    <div className='sideweightage'>
+                        5
+                    </div>
+                </div>
+
+                <div className='sidequestion'>
+                    3. Do you have any technical skills? Can you list your database skills or business intelligence skills? 
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>Your technical skills are directly proportional to your value in the organization.
+                            <br />
+                            It is not compulsory to have advanced technical skills like relational databases and SQL, but the more technically proficient you are as a business analyst, the better. These skills are most desirable and widely used, so if you have some experience in using these technologies, make sure you explain them to your interviewer.
+                        </p>
+                    </div>
+                    <div className='sideweightage'>
+                        3
+                    </div>
+                </div>
+            </div>
+
+
             <div className="pagetitle">
                 Contribute to Library
             </div>
@@ -60,7 +98,7 @@ const Home: NextPage = () => {
                     Select Technology *
                 
                     <Dropdown className='dropdown'>
-                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle'>
+                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle' style={{color: "black"}}>
                         {technology}
                     </Dropdown.Toggle>
 
@@ -119,7 +157,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className='button1'>
-                <button className="buttonsubmit1"><a>Submit</a></button>
+                <button className="buttonsubmit"><a>Submit</a></button>
             </div>
         </div>
     </>

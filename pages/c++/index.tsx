@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     const router = useRouter()
 
     const [data, setData] = useState(null);
-    const [technology, setTechnology] = useState('Select Technology');
+    const [technology, setTechnology] = useState('C++');
     const [question, setQuestion] = useState('Type Question');
     const [answer, setAnswer] = useState('Type Answer');
     const [weightage, setWeightage] = useState(null);
@@ -33,34 +33,91 @@ const Home: NextPage = () => {
         </Link>   
         </div>
 
-        <div className="Display" style={{marginTop: "20px", marginLeft: "35%"}}>
-            <div style={{paddingLeft: "30rem", paddingTop: "20rem"}}>
-                <Image
-                    src="/images/searchdoc.png"
-                    alt="searching data"
-                    width={100}
-                    height={100}
-                ></Image>
-                <p style={{marginLeft: "1rem"}}>No Data</p>
-                <p style={{marginLeft: "-2rem"}}>Select any technology</p>
-            </div>
-        </div>
-
-
         <div className='body'>
-        {/* <View style={styles.verticleLine}></View> */}
+
+            <div className="Display">
+                <div className='sideheading'>
+                    C++ - 3
+                </div>
+
+                <div className='sidequestion'>
+                    1. What are the different data types present in C++?
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>The 4 data types in C++ are given below:
+                            <br />
+                            Primitive Datatype(basic datatype). Example- char, short, int, float, long, double, bool, etc.
+                            <br />
+                            Derived datatype. Example- array, pointer, etc.
+                            <br />
+                            Enumeration. Example- enum
+                            <br />
+                            User-defined data types. Example- structure, class, etc.</p>
+                            <br />
+                    </div>
+                    <div className='sideweightage'>
+                        4
+                    </div>
+                </div>
+
+                <div className='sidequestion'>
+                    2. What are class and object in C++?                
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>
+                            A class is a user-defined data type that has data members and member functions. Data members are the data variables and member functions are the functions that are used to perform operations on these variables.
+                            <br />
+                            An object is an instance of a class. Since a class is a user-defined data type so an object can also be called a variable of that data type.
+                        </p>
+                    </div>
+                    <div className='sideweightage'>
+                        3
+                    </div>
+                </div>
+
+                <div className='sidequestion'>
+                    3. What is polymorphism in C++?    
+                </div>
+                <br />
+                <div className='answercomponent'>
+                    <div className='sideanswer'>
+                        <p>
+                        Polymorphism in simple means having many forms. Its behavior is different in different situations. And this occurs when we have multiple classes that are related to each other by inheritance.
+                        <br />
+                        <br />
+                        For example, think of a base class called a car that has a method called car brand(). Derived classes of cars could be Mercedes, BMW, Audi - And they also have their own implementation of a cars
+                        <br />
+                        <br />
+                        The two types of polymorphism in c++ are:
+                        <br />
+                        <br />
+                        Compile Time Polymorphism
+                        <br />
+                        Runtime Polymorphism
+                        </p>
+                    </div>
+                    <div className='sideweightage'>
+                        5
+                    </div>
+                </div>
+            </div>
+
             <div className="pagetitle">
                 Contribute to Library
             </div>
 
             <div className="vl"></div>
 
-
+            
             <div className= "selecttech">
                     Select Technology *
                 
                     <Dropdown className='dropdown'>
-                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle'>
+                    <Dropdown.Toggle variant="white" id="dropdown-basic" className='dropdown_toggle' style={{color: "black"}}>
                         {technology}
                     </Dropdown.Toggle>
 
@@ -119,7 +176,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className='button1'>
-                <button className="buttonsubmit1"><a>Submit</a></button>
+                <button className="buttonsubmit"><a>Submit</a></button>
             </div>
         </div>
     </>
